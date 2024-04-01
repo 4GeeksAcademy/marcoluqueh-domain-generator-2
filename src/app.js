@@ -2,31 +2,25 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-
   let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
+  let adjective = ["great", "big"];
   let noun = ["jogger", "racoon"];
-  let ext = [".es", ".com", ".net"];
+  let extension = [".es", ".com", ".net"];
 
   let textFor = '<ul class="list-group">';
   textFor += '<li class="list-group-item bg-success text-light">Using for</li>';
 
   for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
+    for (let j = 0; j < adjective.length; j++) {
       for (let k = 0; k < noun.length; k++) {
-        for (let l = 0; l < ext.length; l++) {
+        for (let l = 0; l < extension.length; l++) {
           textFor +=
             '<li class="list-group-item">' +
             pronoun[i] +
-            adj[j] +
+            adjective[j] +
             noun[k] +
-            ext[l] +
+            extension[l] +
             "</li>";
         }
       }
@@ -39,11 +33,11 @@ window.onload = function() {
   textForOf +=
     '<li class="list-group-item bg-success text-light">Using for of</li>';
   for (const pronounForOf of pronoun) {
-    for (const adjForOf of adj) {
+    for (const adjectiveForOf of adjective) {
       for (const nounForOf of noun) {
-        for (const extForOf of ext) {
+        for (const extensionForOf of extension) {
           textForOf += `<li class="list-group-item"> 
-          ${pronounForOf}${adjForOf}${nounForOf}${extForOf}
+          ${pronounForOf}${adjectiveForOf}${nounForOf}${extensionForOf}
           </li>`;
         }
       }
@@ -57,11 +51,11 @@ window.onload = function() {
   textMap +=
     '<li class="list-group-item bg-success text-light">Using .map()</li>';
   pronoun.map(pronounMap => {
-    adj.map(adjMap => {
+    adjective.map(adjectiveMap => {
       noun.map(nounMap => {
-        ext.map(extMap => {
+        extension.map(extensionMap => {
           textMap += `<li class="list-group-item"> 
-          ${pronounMap}${adjMap}${nounMap}${extMap}
+          ${pronounMap}${adjectiveMap}${nounMap}${extensionMap}
           </li>`;
         });
       });
